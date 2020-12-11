@@ -75,11 +75,11 @@ following data should be adopted.
 
 ![alt text](https://github.com/tobiask-hfs/blazert-docker/blob/master/readme_images/ssh_config.PNG)
 
-Then the connection can be tested. Usually there is a request for security, this can be ignored and bypassed with **
-YES**. The request comes because in some way the SSH process inside the Dockerfile is bypassed and since the container
-should not take over any security related tasks, this can be done. If such a demand does not come, then good for you. It
-should also indicate that the connection was successfully established. If this is not the case, you should check again
-if the container is really running.
+**Don't forget to press apply for both!** Then the connection can be tested. Usually there is a request for security, this can
+be ignored and bypassed with **YES**. The request comes because in some way the SSH process inside the Dockerfile is
+bypassed and since the container should not take over any security related tasks, this can be done. If such a demand
+does not come, then good for you. It should also indicate that the connection was successfully established. If this is
+not the case, you should check again if the container is really running.
 
 You should also remember to enter the previously set host port in the port field if it differs from this manual.
 
