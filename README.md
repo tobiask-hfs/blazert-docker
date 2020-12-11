@@ -59,14 +59,14 @@ fee4fc85b63d        Name_of_Image:Tag   "/bin/sh -c '[ ! -f …"   42 seconds ag
 Don't be surprised, under command it only says what is executed in the command line when the container is created. If
 everything has worked up to this point, congratulations. Now you have a running docker container
 
-## Step 6 - Add Remote Host to Clion
+## Step 6 - Add Deployment in Clion
 
 The part that comes now refers specifically to Clion. How a container integration works with other IDEs must be looked
 up independently. Now that we have created the container we want to finally include it for use in Clion.
 
-First open the `Settings..`, in the settings search for **Deployment**. Usually these can be found
-under ``Build, Execution, Deployment``. When you have found it press **Add** and select **SFTP**, the name of the server
-does not matter.
+Before a real remote host can be included, a deployment must first be set up. For this open `Settings..`, there search
+for **Deployment**. Usually it can be found under ``Build, Execution, Deployment``. When you have found it press
+**Add** and select **SFTP**, the name of the server does not matter.
 
 ![alt text](https://github.com/tobiask-hfs/blazert-docker/blob/master/readme_images/SFTPPNG.PNG)
 
@@ -75,67 +75,16 @@ following data should be adopted.
 
 ![alt text](https://github.com/tobiask-hfs/blazert-docker/blob/master/readme_images/ssh_config.PNG)
 
-Then the connection can be tested. Usually there is a request for security, this can
-be ignored and bypassed with **YES**. The request comes because in some way the SSH process inside the Dockerfile is
-bypassed and since the container should not take over any security related tasks, this can be done. If such a demand
-does not come, then good for you. It should also indicate that the connection was successfully established. If this is
-not the case, you should check again if the container is really running.
+Then the connection can be tested. Usually there is a request for security, this can be ignored and bypassed with **
+YES**. The request comes because in some way the SSH process inside the Dockerfile is bypassed and since the container
+should not take over any security related tasks, this can be done. If such a demand does not come, then good for you. It
+should also indicate that the connection was successfully established. If this is not the case, you should check again
+if the container is really running.
 
+You should also remember to enter the previously set host port in the port field if it differs from this manual.
 
-## Step 3 - Run Image
+## Step 7 - Add and setup remote host
 
-If you use the image for the first time, a container must be created first. Usually these can be found under **Build,
-Execution, Deployment**.
-
-```
-$ docker image ls
-REPOSITORY           TAG                 IMAGE ID            CREATED             SIZE
-tobiaskhfs/blazert   1                   70419blaze21        1 hours ago         1.92GB
-```
-
-The command ``docker image ls`` shows every docker repository on the host os. Next you select the repository to start
-from, using the IMAGE ID. You must also specify a port for the localhost.
-
-```
-$ docker run -p 2222:22 --name BlazeRT_Container tobiaskhfs/blazert:1
-```
-
-- ``docker run`` specifies that you want to run an image
-- ``-p 2222:22`` connects the tcp 22 port of the container with the localhost port 2222
-- ``--name BlazeRT_Container`` name of the container (optional)
-- ``tobiaskhfs/blazert:1`` chooses the repository and tag
-    - alternatively the IMAGE ID can be used: ``70419blaze21``
-
-You can check now if the container is running.
-
-```
-$ docker ps -a
-CONTAINER ID        IMAGE                  COMMAND                  CREATED             STATUS              PORTS                  NAMES
-9809683ec69c        tobiaskhfs/blazert:1   "/bin/sh -c '[ ! -f …"   1 minutes ago      Up 1 minutes       0.0.0.0:2222->22/tcp   BlazeRT_Container
-```
-
-There you should now see the container you just created.
-
-![alt text](https://cdn.dumpaday.com/wp-content/uploads/2018/09/photos-21-3.jpg)
-
-## Step 4 - Add Remote Host to Clion
-
-Once the container is running you could start to set up a remote host for clion.
-
-## How to write Dockerfile ?
-
-## List of useful Docker commands
-
-| Command       | Description   | 
-| ------------- |:-------------:| 
-| `docker images`     | List images  | 
-| `docker ps -a`      | List containers      | 
-
-`docker run -p 2222:22 <IMAGE-ID>`: Startet Container mit unter localhost mit port 2222
-
-docker images - zeigt alle vorhandenen images an docker login - login in docker -> danach eingabe von DockerID und
-Passwort docker pull <image-name> - Downloadet jeweiliges docker image docker run -it -d <REPOSITORY> - Startet das
-jeweilige image/container docker ps -a -> lists containers docker exec -it <CONTAINER-ID> bash -> startet powershell des
-jeweilgen containers docker commit <CONTAINER-ID> <new-name:Tag> -> erzeugt neues image vom jeweiligen container unter
-einem neuen namen, praktisch wenn änderungen im container durchgeführt wurden (erzeugung con cmake-debug etc.), tag
-nicht unbedingt nötig docker push <REPOSITORY:TAG> -> pusht das jeweilige image nach dockerhub
+Now comes the part where the remote host is added. For this purpose, **Toolchains** is called under `Settings...`. Here
+you can select a **Remote Host** from the list when adding. Under credentials, the previously set up "Server" is
+selected. For gcc and clang, separate remote hosts must be set.
