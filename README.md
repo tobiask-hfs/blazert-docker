@@ -70,7 +70,17 @@ does not matter.
 
 ![alt text](https://github.com/tobiask-hfs/blazert-docker/blob/master/readme_images/SFTPPNG.PNG)
 
-To include the container, press the button with the three dots next to SSH configuration, a new window should open.
+To include the container, press the button with the three dots next to SSH configuration, a new window should open. The
+following data should be adopted.
+
+![alt text](https://github.com/tobiask-hfs/blazert-docker/blob/master/readme_images/ssh_conig.PNG)
+
+Then the connection can be tested. Usually there is a request for security, this can
+be ignored and bypassed with **YES**. The request comes because in some way the SSH process inside the Dockerfile is
+bypassed and since the container should not take over any security related tasks, this can be done. If such a demand
+does not come, then good for you. It should also indicate that the connection was successfully established. If this is
+not the case, you should check again if the container is really running.
+
 
 ## Step 3 - Run Image
 
