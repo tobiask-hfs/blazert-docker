@@ -88,3 +88,9 @@ You should also remember to enter the previously set host port in the port field
 Now comes the part where the remote host is added. For this purpose, **Toolchains** is called under `Settings...`. Here
 you can select a **Remote Host** from the list when adding. Under credentials, the previously set up "Server" is
 selected. For gcc and clang, separate remote hosts must be set.
+
+Setup for gcc: 
+![alt text](https://github.com/tobiask-hfs/blazert-docker/blob/master/readme_images/remote_gcc.PNG)
+
+Setup for clang:
+![alt text](https://github.com/tobiask-hfs/blazert-docker/blob/master/readme_images/remote_clang.PNG)
