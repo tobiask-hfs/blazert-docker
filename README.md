@@ -94,3 +94,10 @@ Setup for gcc:
 
 Setup for clang:
 ![alt text](https://github.com/tobiask-hfs/blazert-docker/blob/master/readme_images/remote_clang.PNG)
+
+## Step 8 - CMake
+Damit das Projekt läuft, muss ein CMake Profil eingerichtet werden. Das sollte grundlegent aussehen wie folgt:
+
+![alt text]()
+
+Es muss beachtet werden, dass sich das hier immernoch auf das blazeRT Framework bezieht.
