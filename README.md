@@ -89,7 +89,7 @@ Now comes the part where the remote host is added. For this purpose, **Toolchain
 you can select a **Remote Host** from the list when adding. Under credentials, the previously set up "Server" is
 selected. For gcc and clang, separate remote hosts must be set.
 
-Setup for gcc: 
+Setup for gcc:
 
 ![alt text](https://github.com/tobiask-hfs/blazert-docker/blob/master/readme_images/remote_gcc.PNG)
 
@@ -98,8 +98,19 @@ Setup for clang:
 ![alt text](https://github.com/tobiask-hfs/blazert-docker/blob/master/readme_images/remote_clang.PNG)
 
 ## Step 8 - CMake
+
 A CMake profile must be set up for the project to run. This should basically look like the following:
 
 ![alt text](https://github.com/tobiask-hfs/blazert-docker/blob/master/readme_images/example_debug_gcc.PNG)
 
 It must be noted that this still refers to the blazeRT framework.
+
+## Important information
+
+1. If the container is deleted and created again, everything must be repeated from step 7 onwards
+
+2. The container should be started before the IDE to avoid problems. If it is started afterwards, then there may be
+   problems with the remote host.
+
+   **Possible solution**: Checkout another branch and and the go to your desired branch. This should resolve the
+   problem.
