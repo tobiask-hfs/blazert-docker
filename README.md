@@ -90,14 +90,16 @@ you can select a **Remote Host** from the list when adding. Under credentials, t
 selected. For gcc and clang, separate remote hosts must be set.
 
 Setup for gcc: 
+
 ![alt text](https://github.com/tobiask-hfs/blazert-docker/blob/master/readme_images/remote_gcc.PNG)
 
 Setup for clang:
+
 ![alt text](https://github.com/tobiask-hfs/blazert-docker/blob/master/readme_images/remote_clang.PNG)
 
 ## Step 8 - CMake
-Damit das Projekt läuft, muss ein CMake Profil eingerichtet werden. Das sollte grundlegent aussehen wie folgt:
+A CMake profile must be set up for the project to run. This should basically look like the following:
 
 ![alt text](https://github.com/tobiask-hfs/blazert-docker/blob/master/readme_images/example_debug_gcc.PNG)
 
-Es muss beachtet werden, dass sich das hier immernoch auf das blazeRT Framework bezieht.
+It must be noted that this still refers to the blazeRT framework.
