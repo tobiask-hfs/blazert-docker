@@ -64,11 +64,14 @@ everything has worked up to this point, congratulations. Now you have a running 
 The part that comes now refers specifically to Clion. How a container integration works with other IDEs must be looked
 up independently. Now that we have created the container we want to finally include it for use in Clion.
 
-First open the `Settings`, in the settings search for **Deployment**. Usually these can be found
+First open the `Settings..`, in the settings search for **Deployment**. Usually these can be found
 under ``Build, Execution, Deployment``. When you have found it press **Add** and select **SFTP**, the name of the server
-does not matter. 
+does not matter.
 
 ![alt text](https://github.com/tobiask-hfs/blazert-docker/blob/master/readme_images/SFTPPNG.PNG)
+
+To include the container, press the button with the three dots next to SSH configuration, a new window should open.
+
 ## Step 3 - Run Image
 
 If you use the image for the first time, a container must be created first. Usually these can be found under **Build,
