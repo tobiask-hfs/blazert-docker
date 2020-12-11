@@ -73,7 +73,7 @@ does not matter.
 To include the container, press the button with the three dots next to SSH configuration, a new window should open. The
 following data should be adopted.
 
-![alt text](https://github.com/tobiask-hfs/blazert-docker/blob/master/readme_images/ssh_conig.PNG)
+![alt text](https://github.com/tobiask-hfs/blazert-docker/blob/master/readme_images/ssh_config.PNG)
 
 Then the connection can be tested. Usually there is a request for security, this can
 be ignored and bypassed with **YES**. The request comes because in some way the SSH process inside the Dockerfile is
