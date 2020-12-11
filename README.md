@@ -68,6 +68,7 @@ First open the `Settings`, in the settings search for **Deployment**. Usually th
 under ``Build, Execution, Deployment``. When you have found it press **Add** and select **SFTP**, the name of the server
 does not matter. 
 
+![alt text](https://github.com/tobiask-hfs/blazert-docker/blob/master/readme_images/SFTPPNG.PNG)
 ## Step 3 - Run Image
 
 If you use the image for the first time, a container must be created first. Usually these can be found under **Build,
